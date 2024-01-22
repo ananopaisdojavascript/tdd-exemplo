@@ -1,26 +1,3 @@
-# tdd-exemplo
-
-```js
-function realizarParaAdultos(pessoas, callback) {
-  for (let i = 0; i < pessoas.length; i++) {
-    if (pessoas[i].idade >= 18) {
-      callback(pessoas[i])
-    }
-  }
-}
-
-function aguardarTimer(callback) {
-  setTimeout(() => {
-    callback()
-  }, 3000);
-}
-
-module.exports = {
-  realizarParaAdultos, aguardarTimer
-}
-```
-
-```js
 const exemploMock = require("../src/exemplo-mock.js")
 
 it("Exemplo 1 - mock callback", async () => {
@@ -77,4 +54,3 @@ test('Teste 02 - Mock Timer', (done) => {
 afterEach(() => {
   jest.useRealTimers();
 });
-```
